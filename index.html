@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="lv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#38271f">
+<title>Mārtiņielas pirts: Google ieraksta pārbaude</title>
+<meta name="description" content="Nikitas priekšlikums Mārtiņielas pirtij: divas lietas Google ierakstā, ko vērts izlabot, un drukājama kartīte ar QR kodu atsauksmēm.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700;800&family=Vollkorn:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --paper:#f3eee2; --panel:#fbf8f1; --ink:#2c2019; --mute:#6c6055; --line:#d9cfbe;
+  --brown:#38271f; --on-brown:#f1e9da; --on-brown-mute:#c8b8a3;
+  --rust:#a4411c; --green:#2f6a48;
+  --sans:"Libre Franklin","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --serif:"Vollkorn",Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 18px/1.55 var(--serif);font-variant-numeric:lining-nums;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}
+p{margin:0 0 14px;text-wrap:pretty}
+[data-lang][hidden]{display:none!important}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* concept notice */
+.notice{background:var(--brown);color:var(--on-brown-mute);font:500 12.5px/1.45 var(--sans);text-align:center;text-wrap:balance;padding:8px 16px}
+.notice b{color:#fff;font-weight:700}
+
+/* top line */
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-top:16px;padding-bottom:14px;font:700 12px/1.3 var(--sans);letter-spacing:.09em;text-transform:uppercase}
+.top span+span{color:var(--mute);letter-spacing:.05em}
+
+/* hero */
+.hero{display:grid;gap:22px;padding-bottom:48px}
+.hero-ph img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.eyebrow{margin:0 0 10px;font:600 14px/1.3 var(--sans);color:var(--rust)}
+h1{margin:0;font:800 34px/1.07 var(--sans);letter-spacing:-.015em;text-wrap:balance}
+.lede{margin:14px 0 0;line-height:1.5}
+.acts{display:flex;gap:10px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:52px;padding:0 20px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);font:700 15.5px/1 var(--sans);text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn svg{flex:none}
+.btn,.copy button{transition:background-color .15s,color .15s}
+@media (hover:hover){.btn:hover{background:#4a352a;border-color:#4a352a;color:var(--paper)}.btn.ghost:hover{background:var(--ink);border-color:var(--ink)}.copy button:hover{background:#4a352a}}
+:focus-visible{outline:2px solid var(--rust);outline-offset:3px}
+.acts .btn{flex:1}
+.by{margin:16px 0 0;font:500 13.5px/1.5 var(--sans);color:var(--mute)}
+
+/* sections */
+.sec{padding:52px 0;border-top:1px solid var(--line)}
+.rail{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.no{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:var(--ink);color:var(--paper);font:800 14px/1 var(--sans)}
+.no.ok{background:var(--green)}
+.tag{font:700 12px/1 var(--sans);letter-spacing:.09em;text-transform:uppercase;color:var(--mute)}
+.tag.bad{color:var(--rust)} .tag.ok{color:var(--green)} .tag.ink{color:var(--ink)}
+.rail.wide{display:none}
+h2{margin:0 0 14px;font:800 27px/1.1 var(--sans);letter-spacing:-.018em;text-wrap:balance}
+h3{margin:34px 0 12px;font:800 19px/1.2 var(--sans);letter-spacing:-.01em}
+.fine{font:500 14.5px/1.5 var(--sans);color:var(--mute)}
+.fine b{font-weight:700;color:var(--ink)}
+.check{margin:14px 0 0}
+.ui{font:700 .87em/1 var(--sans);white-space:nowrap}
+
+/* now and after */
+.swap{margin-top:22px;background:var(--panel);border:1px solid var(--line)}
+.swap-row{padding:18px}
+.swap-row+.swap-row{border-top:1px solid var(--line)}
+.swap-k{display:flex;align-items:center;gap:8px;font:700 12px/1 var(--sans);letter-spacing:.09em;text-transform:uppercase}
+.now .swap-k{color:var(--rust)} .then .swap-k{color:var(--green)}
+.swap-v{display:block;margin:11px 0 7px;font:700 21px/1.2 var(--sans);letter-spacing:-.01em;overflow-wrap:anywhere}
+.swap-v a{text-decoration-color:var(--line)}
+.swap-v.big{font-size:34px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.swap-n{display:block;font:500 15px/1.45 var(--sans);color:var(--mute)}
+
+/* their listing, drawn in this page's own colours: only the one button that matters is named */
+.gl{--gp:30px;padding-bottom:var(--gp)}
+.gl .swap-k{display:block;color:var(--mute);line-height:1.45}
+.gl-n{display:block;margin-top:13px;font:800 20px/1.2 var(--sans);letter-spacing:-.01em}
+.gl-m{display:block;margin-top:3px;font:500 14.5px/1.4 var(--sans);color:var(--mute)}
+.gl-m .st{font-size:14px;letter-spacing:1px;color:var(--ink)}
+.chips{display:flex;gap:8px;margin-top:14px}
+.chip{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:7px;height:40px;min-width:50px;border:1.5px solid var(--line);border-radius:20px;color:#a99d8f}
+.chip.on{padding:0 17px 0 13px;border:2px solid var(--rust);color:var(--rust);font:700 15px/1 var(--sans)}
+.chip.on::before{content:"";position:absolute;left:50%;top:calc(100% + 4px);width:2px;height:calc(var(--gp) - 6px);margin-left:-1px;background:var(--rust)}
+.chip.on::after{content:"";position:absolute;left:50%;top:calc(100% + var(--gp) - 12px);width:9px;height:9px;margin-left:-4.5px;border:solid var(--rust);border-width:0 2px 2px 0;transform:rotate(45deg)}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{position:relative;padding:0 0 14px 34px;counter-increment:s}
+.steps li::before{content:counter(s) ".";position:absolute;left:0;top:0;font:800 18px/1.55 var(--sans)}
+.copy{display:flex;align-items:stretch;max-width:400px;margin-top:10px;border:1.5px solid var(--ink);background:var(--panel)}
+.copy code{flex:1;min-width:0;padding:12px 14px;font:600 15.5px/1.3 var(--sans);white-space:nowrap}
+.copy button{border:0;background:var(--ink);color:var(--paper);font:700 14px/1 var(--sans);padding:0 16px;cursor:pointer}
+
+/* what is fine */
+.oks{list-style:none;margin:22px 0 0;padding:0;border-bottom:1px solid var(--line)}
+.oks li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:12px;padding:14px 0;border-top:1px solid var(--line)}
+.oks svg{margin-top:4px;color:var(--green)}
+.oks b{display:block;font:700 16px/1.35 var(--sans)}
+.oks span{display:block;font:500 15.5px/1.45 var(--sans);color:var(--mute)}
+.shots{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;margin-top:28px}
+.shots .tall{grid-row:1 / 3}
+.shots img{width:100%;height:100%;object-fit:cover}
+.shots .tall img{aspect-ratio:2/3}
+
+/* the five reviews */
+.revs{list-style:none;margin:22px 0 22px;padding:0;border-top:1px solid var(--line)}
+.revs li{padding:13px 0;border-bottom:1px solid var(--line)}
+.rev-h{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.st{font-size:17px;letter-spacing:3px;white-space:nowrap} .st i{font-style:normal;color:#cdc2b0}
+.age{font:500 14.5px/1.3 var(--sans);color:var(--mute)}
+.revs blockquote{margin:12px 0 0;font:italic 400 24px/1.25 var(--serif)}
+.revs .bang{margin:0 -.06em 0 -.11em}
+.revs .why{margin:8px 0 0;font:600 14.5px/1.45 var(--sans);color:var(--rust)}
+.revs .tip{margin:5px 0 4px;font:500 14.5px/1.45 var(--sans)}
+
+/* the card */
+.band{background:var(--brown);color:var(--on-brown);padding:60px 0 64px}
+.band-q{margin:0;font:italic 400 26px/1.25 var(--serif);text-wrap:balance}
+.band-c{display:block;margin:12px 0 0;font:500 13.5px/1.4 var(--sans);font-style:normal;color:var(--on-brown-mute)}
+.band .rail{margin-top:44px}
+.band .tag{color:var(--on-brown-mute)}
+.band-tx p{color:#e2d7c6}
+.card{display:flex;flex-direction:column;width:26.25em;height:37em;margin:34px auto 0;padding:2.5em 2.4em 2.4em;background:#fff;color:#1f1612;font:500 11.4px/1.3 var(--sans);font-size:min(12.4px,calc((100vw - 40px) / 26.25));box-shadow:0 18px 44px rgba(0,0,0,.38)}
+.card-n{padding-bottom:.85em;border-bottom:.42em solid var(--brown);font-weight:800;font-size:1.08em;letter-spacing:.14em;text-transform:uppercase}
+.card-h{margin:.32em 0 0;font-weight:800;font-size:4.4em;line-height:.95;letter-spacing:-.03em}
+.card-p{margin:.62em 0 0;font:400 1.6em/1.2 var(--serif)}
+.card-b{display:flex;align-items:stretch;gap:1.5em;margin-top:auto}
+/* the code is drawn as one vector path (same modules as img/qr-review.png) so it stays sharp on screen and in print; the white card is its quiet zone */
+.card-qr{flex:none;width:12.6em;height:12.6em;color:#000}
+.card-f{display:flex;flex-direction:column;justify-content:space-between;font-weight:600;font-size:1.2em;line-height:1.3}
+.card-f span{margin-top:-.24em}
+.card-f b{margin-bottom:-.1em;font-weight:800;font-size:1.3em;line-height:1}
+.band-acts{margin-top:30px}
+.band .btn{width:100%;background:var(--on-brown);border-color:var(--on-brown);color:var(--brown)}
+@media (hover:hover){.band .btn:hover{background:#fff;border-color:#fff;color:var(--brown)}}
+.band :focus-visible{outline-color:var(--on-brown)}
+.band-note{margin:12px 0 0;font:500 14px/1.45 var(--sans);color:var(--on-brown-mute)}
+.band-links{display:flex;flex-wrap:wrap;gap:6px 26px;margin-top:20px;font:600 15px/1.4 var(--sans)}
+
+/* what next */
+.more{list-style:none;margin:20px 0 26px;padding:0;border-bottom:1px solid var(--line)}
+.more li{padding:14px 0;border-top:1px solid var(--line)}
+.more b{display:block;font:700 17px/1.3 var(--sans)}
+.more span{display:block;margin-top:2px;font:500 15.5px/1.45 var(--sans);color:var(--mute)}
+.mail{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
+.mail span{font:500 15px/1.3 var(--sans);color:var(--mute)}
+
+.foot{border-top:1px solid var(--line);padding:26px 0 44px;font:500 13.5px/1.6 var(--sans);color:var(--mute)}
+.foot p{margin:0 0 6px;max-width:680px}
+.foot b{color:var(--ink);font-weight:600}
+
+.sheet{display:none}
+
+@media (max-width:639px){
+  .steps .copy{margin-left:-34px}
+}
+@media (max-width:399px){
+  .swap-v{font-size:clamp(18px,5.4vw,21px)}
+  .copy code{padding:12px 11px;font-size:15px}
+}
+
+@media (min-width:640px) and (max-width:899px){
+  .wrap{max-width:680px}
+  .card{font-size:12.5px}
+}
+
+@media (min-width:900px){
+  body{font-size:19px}
+  .wrap{padding:0 48px}
+  .top{padding-top:22px;padding-bottom:22px;font-size:12.5px}
+  .hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,5.5vw,80px);align-items:center;padding-top:16px;padding-bottom:88px}
+  .hero-ph{order:2}
+  .eyebrow{font-size:15.5px;margin-bottom:14px}
+  h1{font-size:clamp(42px,4.2vw,58px);line-height:1.03}
+  .lede{margin-top:20px;font-size:21px;max-width:30em}
+  .acts{margin-top:30px}
+  .acts .btn{flex:none;min-width:190px}
+  .by{margin-top:22px;font-size:14px}
+  .sec{padding:84px 0}
+  .grid{display:grid;grid-template-columns:190px minmax(0,720px);gap:0 72px}
+  .rail{position:sticky;top:28px;align-self:start;margin:6px 0 0}
+  .rail.wide{display:flex}
+  h2{font-size:38px;margin-bottom:18px}
+  h3{margin:44px 0 14px;font-size:22px}
+  .swap{margin-top:28px}
+  .swap-row{display:grid;grid-template-columns:168px minmax(0,1fr);column-gap:24px;padding:24px 26px}
+  .swap-k{grid-row:1 / 3;align-self:start;margin-top:7px}
+  .swap-v{margin:0 0 6px;font-size:24px}
+  .swap-v.big{font-size:44px;line-height:1}
+  .swap.nums .swap-k{margin-top:16px}
+  .gl{--gp:34px;padding-bottom:var(--gp)}
+  .gl .swap-k{margin-top:5px}
+  .gl-n{margin-top:0;font-size:22px}
+  .shots{gap:12px;margin-top:34px}
+  .revs{max-width:560px}
+  .revs blockquote{font-size:28px}
+  .band{padding:96px 0 100px}
+  .band .grid{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"tx card" "acts card";gap:0 88px}
+  .band-tx{grid-area:tx;align-self:end} .band-acts{grid-area:acts;align-self:start} .band .card{grid-area:card;align-self:center}
+  .band-q{font-size:34px}
+  .band .rail{position:static;margin:56px 0 14px}
+  .band-tx p{max-width:30em}
+  .card{margin:0;font-size:13px}
+  .band .btn{width:auto;min-width:230px}
+  .more b{font-size:18px}
+  .foot{padding:32px 0 56px}
+}
+
+@page{margin:14mm}
+@media print{
+  body{background:#fff;font-size:10.5pt;line-height:1.45}
+  .wrap{max-width:none;padding:0}
+  .acts,.band-acts,.copy button{display:none!important}
+  .notice{background:none;color:var(--mute);text-align:left;padding:0 0 6pt;border-bottom:1px solid var(--line)} .notice b{color:var(--ink)}
+  .top{padding:8pt 0 10pt}
+  .hero{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:20pt;align-items:center;padding:0 0 16pt}
+  .hero-ph{order:2}
+  h1{font-size:23pt} .lede{font-size:11.5pt;margin-top:8pt} .by{margin-top:8pt;font-size:8.5pt}
+  .grid{display:block}
+  .sec{padding:15pt 0}
+  .rail{position:static;margin:0 0 6pt}
+  .no{background:none;color:var(--ink);border:1.5px solid var(--ink)} .no.ok{background:none;color:var(--green);border-color:var(--green)}
+  h2{font-size:16pt;margin-bottom:6pt} h3{font-size:12pt;margin:12pt 0 5pt}
+  p{margin-bottom:6pt}
+  .swap{margin-top:10pt;background:none} .swap-row{display:block;padding:8pt 11pt} .swap-k{margin:0} .swap-v{font-size:13pt;margin:5pt 0 3pt} .swap-v.big{font-size:20pt}
+  .gl{padding-bottom:8pt} .gl-n{font-size:12pt;margin-top:5pt} .gl-m{font-size:9pt} .chips{margin-top:6pt} .chip{height:22pt;min-width:30pt} .chip.on{font-size:9.5pt} .chip.on::before,.chip.on::after{display:none}
+  .swap-n,.fine,.oks span,.more span,.age,.revs .why,.revs .tip{font-size:9pt}
+  .steps li{padding-bottom:5pt} .steps li::before{font-size:11pt}
+  .copy{max-width:230pt;margin-top:5pt;border-width:1px;background:none} .copy code{padding:5pt 8pt;font-size:10pt}
+  .oks{margin-top:10pt} .oks li{padding:6pt 0} .oks b,.more b{font-size:10.5pt}
+  .shots{max-width:290pt;margin-top:12pt}
+  .revs{max-width:330pt;margin:10pt 0} .revs li{padding:5pt 0} .revs blockquote{font-size:14pt;margin-top:5pt} .st{font-size:11pt}
+  .band{background:none;color:var(--ink);padding:15pt 0;border-top:1px solid var(--line)}
+  .band-q{font-size:15pt} .band .rail{margin:16pt 0 6pt}
+  .band-tx p,.band-c,.band .tag{color:var(--mute)}
+  .card{margin:12pt 0 0;font-size:6.4pt;box-shadow:none;border:1px solid #bbb}
+  .more{margin:8pt 0 12pt} .more li{padding:6pt 0}
+  .mail .btn{display:none} .mail span{color:var(--ink);font-weight:600}
+  .foot{padding:10pt 0 0;font-size:8.5pt}
+  a{text-decoration:none}
+  h2,h3,.rail{break-after:avoid} .swap,.card,.shots,.revs li,.oks li,.more li{break-inside:avoid}
+  html.print-cards,html.print-cards body{background:#fff;margin:0}
+  html.print-cards body>*:not(.sheet){display:none!important}
+  html.print-cards .sheet{display:grid;grid-template-columns:105mm 105mm;grid-template-rows:148mm 148mm;width:210mm;height:296mm;overflow:hidden}
+  html.print-cards .sheet .card{width:105mm;height:148mm;margin:0;font-size:4mm;border:0;box-shadow:none;outline:.2mm solid #b9b0a3;outline-offset:-.1mm}
+}
+</style>
+</head>
+<body>
+<div class="notice"><b>Nikita:</b> <span data-lang="lv">Neatkarīgs priekšlikums, nav Mārtiņielas pirts vai Google oficiāls dokuments.</span></div>
+
+<div class="top wrap"><span>Google ieraksta pārbaude</span><span>06.10.2026</span></div>
+
+<main>
+<section class="hero wrap">
+  <div class="hero-ph"><img src="img/fasade.jpg" width="1080" height="720" alt="Mārtiņielas pirts ieeja Mārtiņa ielā 12, virs durvīm nojume ar pirts nosaukumu baltiem burtiem"></div>
+  <div class="hero-tx">
+    <p class="eyebrow">Mārtiņielas pirts Google kartēs</p>
+    <h1>Poga „Vietne” ved uz zl.lv, nevis uz jūsu lapu</h1>
+    <p class="lede">Pārbaudīju Mārtiņielas pirts ierakstu Google kartēs. Atradu divas lietas, ko varat izlabot paši piecās minūtēs, un sagatavoju kartīti ar QR kodu atsauksmēm.</p>
+    <div class="acts">
+      <a class="btn" href="#vietne">Kas jālabo <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 1v11M2.5 7.5 7 12l4.5-4.5"/></svg></a>
+      <a class="btn ghost" href="#kartite">QR kartīte</a>
+    </div>
+    <p class="by">Sagatavoja Nikita.</p>
+  </div>
+</section>
+
+<section class="sec" id="vietne">
+  <div class="wrap grid">
+    <div class="rail"><span class="no">1</span><span class="tag bad">Jālabo</span></div>
+    <div>
+      <h2>Viesis nonāk zl.lv katalogā, nevis jūsu lapā</h2>
+      <p>Jums ir sava lapa, malkaspirts.lv. Taču cilvēks, kurš atrod pirti Google kartēs un nospiež pogu <span class="ui">Vietne</span>, tur nenonāk.</p>
+      <div class="swap">
+        <div class="swap-row gl">
+          <span class="swap-k">Google kartēs, shematiski</span>
+          <div class="gl-b">
+            <b class="gl-n">Mārtiņielas pirts</b>
+            <span class="gl-m">4,0 <span class="st" aria-hidden="true">★★★★<i>★</i></span> (80)</span>
+            <span class="gl-m">Sabiedriskā pirts</span>
+            <div class="chips">
+              <span class="chip" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 14 5-5-5-5"/><path d="M4 20v-7a4 4 0 0 1 4-4h12"/></svg></span>
+              <span class="chip on"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Vietne</span>
+              <span class="chip" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+              <span class="chip" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="swap-row now">
+          <span class="swap-k"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m2 2 9 9M11 2l-9 9"/></svg>Tagad atveras</span>
+          <span class="swap-v"><a href="https://infolapa.zl.lv/martinielas-pirts/" rel="noopener nofollow">infolapa.zl.lv/<wbr>martinielas-pirts</a></span>
+          <span class="swap-n">zl.lv kataloga lapa. Jūsu pašu lapa tur ir tikai viena no saitēm, un līdz tai jātiek ar vēl vienu klikšķi.</span>
+        </div>
+        <div class="swap-row then">
+          <span class="swap-k"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m1.5 7 4 4 7-9"/></svg>Jāatveras</span>
+          <span class="swap-v"><a href="https://www.malkaspirts.lv/" rel="noopener">www.malkaspirts.lv</a></span>
+          <span class="swap-n">Jūsu pašu lapa ar darba laiku un tālruni.</span>
+        </div>
+      </div>
+      <p class="fine check">Varat pārbaudīt paši: <a href="https://maps.google.com/?cid=14962894338973122622" rel="noopener">atveriet ierakstu Google kartēs</a> un nospiediet <b>Vietne</b>.</p>
+      <h3>Kā izlabot</h3>
+      <ol class="steps">
+        <li>Atveriet <a href="https://business.google.com/" rel="noopener">business.google.com</a> ar to Google kontu, ar kuru pārvaldāt pirts ierakstu.</li>
+        <li>Izvēlieties <span class="ui">Rediģēt profilu</span>, tad <span class="ui">Kontaktinformācija</span> un lauku <span class="ui">Vietne</span>.</li>
+        <li>Ierakstiet savas lapas adresi un saglabājiet.
+          <span class="copy"><code>https://www.malkaspirts.lv</code><button type="button" data-copy="https://www.malkaspirts.lv">Kopēt</button></span></li>
+      </ol>
+      <p class="fine">Ja nezināt, kuram kontam ir piekļuve ierakstam, atveriet ierakstu Google kartēs un izvēlieties <b>Ieteikt labojumu</b>: vietni un indeksu var pieteikt arī tā.</p>
+      <p class="fine">Google izmaiņas vispirms pārbauda, tāpēc jaunā adrese var neparādīties uzreiz. Izvēlņu nosaukumi Google latviskajā saskarnē var nedaudz atšķirties no šeit rakstītajiem.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="indekss">
+  <div class="wrap grid">
+    <div class="rail"><span class="no">2</span><span class="tag bad">Jālabo</span></div>
+    <div>
+      <h2>Google rāda otras pirts pasta indeksu</h2>
+      <p>Adrese Google kartēs ir pareiza, Mārtiņa iela 12. Nepareizs ir tikai pasta indekss aiz tās.</p>
+      <div class="swap nums">
+        <div class="swap-row now">
+          <span class="swap-k"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m2 2 9 9M11 2l-9 9"/></svg>Google rāda</span>
+          <span class="swap-v big">LV-1004</span>
+          <span class="swap-n">Tas ir jūsu otras pirts, Jelgavas ielā 53, indekss.</span>
+        </div>
+        <div class="swap-row then">
+          <span class="swap-k"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m1.5 7 4 4 7-9"/></svg>Jābūt</span>
+          <span class="swap-v big">LV-1048</span>
+          <span class="swap-n">Tā rakstīts jūsu lapā malkaspirts.lv, zl.lv katalogā un OpenStreetMap kartē.</span>
+        </div>
+      </div>
+      <h3>Kā izlabot</h3>
+      <p>Turpat, kur pirmais labojums: <span class="ui">Rediģēt profilu</span>, tad <span class="ui">Atrašanās vieta</span> un <span class="ui">Adrese</span>. Indeksa laukā ierakstiet <b>LV-1048</b>. Pēc adreses labojuma Google var palūgt uzņēmumu apstiprināt vēlreiz.</p>
+      <p class="fine">Tas ir sīkums. Taču, jo vienādāk adrese rakstīta visur, jo drošāk kartes un navigācija saprot, ka tā ir viena un tā pati vieta.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="kartiba">
+  <div class="wrap grid">
+    <div class="rail"><span class="no ok"><svg width="13" height="12" viewBox="0 0 14 13" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m1.5 7 4 4 7-9"/></svg></span><span class="tag ok">Kārtībā</span></div>
+    <div>
+      <h2>Pārējais ir kārtībā</h2>
+      <p>Salīdzināju Google ierakstu ar jūsu lapu. Šīs trīs lietas nav jāaiztiek.</p>
+      <ul class="oks">
+        <li><svg width="18" height="16" viewBox="0 0 14 13" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m1.5 7 4 4 7-9"/></svg><div><b>Darba laiks</b><span>Pirmdienās 9:00–19:00, sestdienās un svētdienās 9:00–21:30. Google kartēs un jūsu lapā rakstīts vienādi.</span></div></li>
+        <li><svg width="18" height="16" viewBox="0 0 14 13" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m1.5 7 4 4 7-9"/></svg><div><b>Tālrunis</b><span>67 471 205. Sakrīt ar jūsu lapu.</span></div></li>
+        <li><svg width="18" height="16" viewBox="0 0 14 13" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m1.5 7 4 4 7-9"/></svg><div><b>Fotogrāfijas</b><span>Ierakstā ir jūsu pašu attēli. Trīs no tiem zemāk.</span></div></li>
+      </ul>
+      <div class="shots">
+        <div class="tall"><img src="img/zvaigznes.jpg" width="700" height="1050" loading="lazy" alt="Telpa ar zeltainu mozaīku, mozaīkas solu ar zilu apmali un zvaigžņu griestiem"></div>
+        <div><img src="img/mozaika.jpg" width="700" height="509" loading="lazy" alt="Ar mozaīku klāts paaugstinājums ar ūdens krāniem zālē ar marmora raksta flīzēm"></div>
+        <div><img src="img/atputa.jpg" width="700" height="508" loading="lazy" alt="Atpūtas telpa ar gaišu ādas stūra dīvānu un koka paneļiem"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="atsauksmes">
+  <div class="wrap grid">
+    <div class="rail"><span class="tag ink">Vērts zināt</span></div>
+    <div>
+      <h2>Priekšplānā ir vecas atsauksmes</h2>
+      <p>Vērtējums ir 4,0 no 5, kopā 80 atsauksmes. Taču piecām atsauksmēm, ko Google rāda pirmās, ir no trim līdz astoņiem gadiem, un trim no tām ir viena zvaigzne.</p>
+      <ol class="revs">
+        <li><div class="rev-h"><span class="st" role="img" aria-label="5 zvaigznes no 5">★★★★★</span><span class="age">pirms 8 gadiem</span></div></li>
+        <li><div class="rev-h"><span class="st" role="img" aria-label="5 zvaigznes no 5">★★★★★</span><span class="age">pirms 3 gadiem</span></div></li>
+        <li><div class="rev-h"><span class="st" role="img" aria-label="1 zvaigzne no 5">★<i>★★★★</i></span><span class="age">pirms 5 gadiem</span></div></li>
+        <li><div class="rev-h"><span class="st" role="img" aria-label="1 zvaigzne no 5">★<i>★★★★</i></span><span class="age">pirms 3 gadiem</span></div>
+          <blockquote>„Jā,ir labi,rīt iešu atkal<span class="bang">!</span>”</blockquote>
+          <p class="why">Viena zvaigzne, bet vārdi ir uzslava. Izskatās, ka zvaigznes atzīmētas kļūdas pēc.</p>
+          <p class="tip">Pieklājīga atbilde zem šīs atsauksmes neko nemaksā, un katrs, kas to izlasa, redz, ka pirtī kāds klausās.</p></li>
+        <li><div class="rev-h"><span class="st" role="img" aria-label="1 zvaigzne no 5">★<i>★★★★</i></span><span class="age">pirms 4 gadiem</span></div></li>
+      </ol>
+      <p>Kopējo ainu gan maina tikai jaunas atsauksmes. Tāpēc tālāk ir kartīte.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="kartite">
+  <div class="wrap grid">
+    <div class="band-tx">
+      <blockquote class="band-q">„Ļoti labi izkarsējos, bet bērza slotiņu aizmirsu mājās.”</blockquote>
+      <cite class="band-c">Jānis, 5 zvaigznes Google kartēs</cite>
+      <div class="rail"><span class="tag">Gatava drukai</span></div>
+      <h2>Kartīte pie kases</h2>
+      <p>Šādu atsauksmju kļūst vairāk, ja viesim palūdz īstajā brīdī. QR kods uz kartītes atver tieši jūsu Google atsauksmju formu, nekas nav jāmeklē. Izdrukājiet un nolieciet pie kases vai kafejnīcā.</p>
+    </div>
+    <div class="card">
+      <div class="card-n">Mārtiņielas pirts</div>
+      <div class="card-h">Patika pērties?</div>
+      <div class="card-p">Atstājiet atsauksmi<br>Google kartēs.</div>
+      <div class="card-b">
+        <svg class="card-qr" viewBox="0 0 37 37" role="img" aria-label="QR kods, kas atver Mārtiņielas pirts Google atsauksmju formu"><path fill="currentColor" d="M0 0h7v1h-7zM9 0h1v1h-1zM11 0h1v1h-1zM13 0h2v1h-2zM16 0h1v1h-1zM19 0h2v1h-2zM22 0h1v1h-1zM27 0h2v1h-2zM30 0h7v1h-7zM0 1h1v1h-1zM6 1h1v1h-1zM9 1h3v1h-3zM13 1h2v1h-2zM17 1h2v1h-2zM21 1h2v1h-2zM25 1h3v1h-3zM30 1h1v1h-1zM36 1h1v1h-1zM0 2h1v1h-1zM2 2h3v1h-3zM6 2h1v1h-1zM8 2h1v1h-1zM10 2h7v1h-7zM18 2h1v1h-1zM21 2h2v1h-2zM24 2h1v1h-1zM26 2h1v1h-1zM30 2h1v1h-1zM32 2h3v1h-3zM36 2h1v1h-1zM0 3h1v1h-1zM2 3h3v1h-3zM6 3h1v1h-1zM8 3h4v1h-4zM13 3h1v1h-1zM15 3h3v1h-3zM19 3h2v1h-2zM23 3h4v1h-4zM30 3h1v1h-1zM32 3h3v1h-3zM36 3h1v1h-1zM0 4h1v1h-1zM2 4h3v1h-3zM6 4h1v1h-1zM8 4h4v1h-4zM13 4h1v1h-1zM18 4h4v1h-4zM23 4h1v1h-1zM28 4h1v1h-1zM30 4h1v1h-1zM32 4h3v1h-3zM36 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM8 5h2v1h-2zM11 5h1v1h-1zM13 5h3v1h-3zM18 5h1v1h-1zM20 5h1v1h-1zM27 5h1v1h-1zM30 5h1v1h-1zM36 5h1v1h-1zM0 6h7v1h-7zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM24 6h1v1h-1zM26 6h1v1h-1zM28 6h1v1h-1zM30 6h7v1h-7zM8 7h8v1h-8zM18 7h4v1h-4zM23 7h1v1h-1zM26 7h1v1h-1zM28 7h1v1h-1zM0 8h1v1h-1zM2 8h5v1h-5zM12 8h1v1h-1zM14 8h2v1h-2zM17 8h1v1h-1zM21 8h3v1h-3zM26 8h1v1h-1zM28 8h1v1h-1zM30 8h5v1h-5zM0 9h4v1h-4zM7 9h2v1h-2zM13 9h1v1h-1zM15 9h3v1h-3zM19 9h2v1h-2zM22 9h1v1h-1zM25 9h1v1h-1zM28 9h2v1h-2zM33 9h1v1h-1zM35 9h1v1h-1zM0 10h3v1h-3zM6 10h2v1h-2zM11 10h3v1h-3zM18 10h1v1h-1zM20 10h1v1h-1zM22 10h1v1h-1zM25 10h3v1h-3zM30 10h1v1h-1zM33 10h1v1h-1zM35 10h2v1h-2zM2 11h2v1h-2zM5 11h1v1h-1zM7 11h1v1h-1zM9 11h3v1h-3zM16 11h1v1h-1zM19 11h6v1h-6zM26 11h1v1h-1zM28 11h2v1h-2zM31 11h1v1h-1zM36 11h1v1h-1zM1 12h3v1h-3zM5 12h4v1h-4zM10 12h1v1h-1zM17 12h1v1h-1zM19 12h2v1h-2zM22 12h6v1h-6zM29 12h8v1h-8zM0 13h1v1h-1zM4 13h2v1h-2zM9 13h1v1h-1zM13 13h1v1h-1zM16 13h1v1h-1zM19 13h3v1h-3zM23 13h1v1h-1zM25 13h1v1h-1zM31 13h1v1h-1zM35 13h1v1h-1zM2 14h2v1h-2zM5 14h5v1h-5zM11 14h1v1h-1zM15 14h4v1h-4zM20 14h2v1h-2zM25 14h3v1h-3zM29 14h1v1h-1zM31 14h3v1h-3zM35 14h2v1h-2zM0 15h1v1h-1zM2 15h1v1h-1zM4 15h1v1h-1zM8 15h1v1h-1zM10 15h2v1h-2zM14 15h2v1h-2zM19 15h3v1h-3zM23 15h2v1h-2zM27 15h1v1h-1zM29 15h4v1h-4zM35 15h1v1h-1zM0 16h2v1h-2zM4 16h1v1h-1zM6 16h1v1h-1zM11 16h2v1h-2zM16 16h5v1h-5zM22 16h1v1h-1zM24 16h1v1h-1zM26 16h1v1h-1zM28 16h3v1h-3zM32 16h1v1h-1zM34 16h2v1h-2zM0 17h1v1h-1zM3 17h1v1h-1zM8 17h8v1h-8zM20 17h1v1h-1zM23 17h1v1h-1zM25 17h1v1h-1zM30 17h2v1h-2zM34 17h2v1h-2zM0 18h1v1h-1zM2 18h1v1h-1zM5 18h3v1h-3zM9 18h2v1h-2zM12 18h1v1h-1zM15 18h2v1h-2zM21 18h2v1h-2zM25 18h3v1h-3zM29 18h3v1h-3zM33 18h1v1h-1zM35 18h2v1h-2zM2 19h4v1h-4zM8 19h2v1h-2zM11 19h2v1h-2zM14 19h2v1h-2zM18 19h1v1h-1zM21 19h1v1h-1zM23 19h1v1h-1zM26 19h1v1h-1zM29 19h2v1h-2zM32 19h1v1h-1zM36 19h1v1h-1zM0 20h3v1h-3zM6 20h3v1h-3zM10 20h1v1h-1zM12 20h4v1h-4zM17 20h1v1h-1zM19 20h1v1h-1zM22 20h1v1h-1zM24 20h3v1h-3zM29 20h2v1h-2zM32 20h3v1h-3zM0 21h1v1h-1zM2 21h3v1h-3zM8 21h1v1h-1zM10 21h1v1h-1zM14 21h1v1h-1zM16 21h4v1h-4zM23 21h1v1h-1zM25 21h1v1h-1zM28 21h1v1h-1zM33 21h1v1h-1zM35 21h1v1h-1zM0 22h5v1h-5zM6 22h3v1h-3zM10 22h1v1h-1zM13 22h3v1h-3zM18 22h1v1h-1zM24 22h1v1h-1zM27 22h2v1h-2zM30 22h4v1h-4zM36 22h1v1h-1zM0 23h1v1h-1zM2 23h1v1h-1zM4 23h2v1h-2zM10 23h1v1h-1zM13 23h2v1h-2zM16 23h1v1h-1zM18 23h1v1h-1zM20 23h4v1h-4zM29 23h1v1h-1zM31 23h2v1h-2zM35 23h1v1h-1zM0 24h3v1h-3zM6 24h4v1h-4zM13 24h3v1h-3zM18 24h2v1h-2zM21 24h3v1h-3zM26 24h2v1h-2zM29 24h2v1h-2zM32 24h1v1h-1zM34 24h3v1h-3zM0 25h6v1h-6zM7 25h3v1h-3zM11 25h1v1h-1zM14 25h3v1h-3zM18 25h3v1h-3zM23 25h2v1h-2zM27 25h2v1h-2zM31 25h1v1h-1zM33 25h1v1h-1zM0 26h1v1h-1zM2 26h2v1h-2zM5 26h2v1h-2zM8 26h1v1h-1zM11 26h2v1h-2zM20 26h1v1h-1zM22 26h1v1h-1zM25 26h4v1h-4zM30 26h2v1h-2zM35 26h2v1h-2zM0 27h1v1h-1zM4 27h1v1h-1zM9 27h3v1h-3zM14 27h1v1h-1zM16 27h1v1h-1zM19 27h1v1h-1zM21 27h2v1h-2zM24 27h1v1h-1zM26 27h2v1h-2zM29 27h3v1h-3zM35 27h1v1h-1zM0 28h1v1h-1zM2 28h3v1h-3zM6 28h4v1h-4zM12 28h1v1h-1zM16 28h2v1h-2zM22 28h1v1h-1zM24 28h3v1h-3zM28 28h8v1h-8zM8 29h7v1h-7zM16 29h2v1h-2zM19 29h3v1h-3zM23 29h2v1h-2zM27 29h2v1h-2zM32 29h2v1h-2zM35 29h1v1h-1zM0 30h7v1h-7zM12 30h2v1h-2zM15 30h3v1h-3zM20 30h2v1h-2zM25 30h1v1h-1zM28 30h1v1h-1zM30 30h1v1h-1zM32 30h1v1h-1zM34 30h3v1h-3zM0 31h1v1h-1zM6 31h1v1h-1zM8 31h1v1h-1zM11 31h3v1h-3zM15 31h4v1h-4zM21 31h2v1h-2zM28 31h1v1h-1zM32 31h2v1h-2zM35 31h2v1h-2zM0 32h1v1h-1zM2 32h3v1h-3zM6 32h1v1h-1zM8 32h1v1h-1zM11 32h6v1h-6zM20 32h1v1h-1zM22 32h1v1h-1zM25 32h8v1h-8zM34 32h3v1h-3zM0 33h1v1h-1zM2 33h3v1h-3zM6 33h1v1h-1zM8 33h3v1h-3zM12 33h2v1h-2zM15 33h1v1h-1zM18 33h2v1h-2zM21 33h2v1h-2zM25 33h6v1h-6zM32 33h2v1h-2zM36 33h1v1h-1zM0 34h1v1h-1zM2 34h3v1h-3zM6 34h1v1h-1zM8 34h3v1h-3zM12 34h7v1h-7zM20 34h1v1h-1zM24 34h1v1h-1zM26 34h2v1h-2zM29 34h1v1h-1zM34 34h3v1h-3zM0 35h1v1h-1zM6 35h1v1h-1zM12 35h4v1h-4zM18 35h1v1h-1zM21 35h4v1h-4zM27 35h1v1h-1zM32 35h1v1h-1zM36 35h1v1h-1zM0 36h7v1h-7zM8 36h1v1h-1zM10 36h2v1h-2zM13 36h3v1h-3zM17 36h1v1h-1zM19 36h1v1h-1zM22 36h5v1h-5zM30 36h1v1h-1zM32 36h5v1h-5z"/></svg>
+        <div class="card-f"><span>Noskenējiet ar tālruņa kameru.</span><b>Paldies!</b></div>
+      </div>
+    </div>
+    <div class="band-acts">
+      <button class="btn" type="button" data-print>Drukāt kartītes</button>
+      <p class="band-note">Vienā A4 lapā ir četras A6 kartītes, sagrieziet pa līnijām.</p>
+      <div class="band-links">
+        <a href="https://search.google.com/local/writereview?placeid=ChIJ6zANHBzQ7kYRPkAy3h_hps8" rel="noopener">Izmēģināt saiti</a>
+        <a href="img/qr-review.png" download="martinielas-pirts-qr.png">Lejupielādēt QR kodu</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="talak" style="border-top:0">
+  <div class="wrap grid">
+    <div class="rail wide"><span class="tag">Tālāk</span></div>
+    <div>
+      <h2>Ja gribat, lai palīdzu</h2>
+      <p>Esmu Nikita, strādāju ar nelielu uzņēmumu mājaslapām un Google ierakstiem. Abus labojumus varat veikt paši jau šodien, un kartīti drīkstat izmantot tādu, kāda tā ir. Par to nekas nav jāmaksā.</p>
+      <p>Ja noder, varu izdarīt vēl trīs lietas.</p>
+      <ul class="more">
+        <li><b>Atbildes uz atsauksmēm</b><span>Sagatavošu atbilžu melnrakstus jūsu stilā, jums atliks tikai tos apstiprināt.</span></li>
+        <li><b>Otra pirts un hostelis</b><span>Tāda pati pārbaude Pārdaugavas malkas pirtij Jelgavas ielā 53 un hostelim.</span></li>
+        <li><b>Kartīte jūsu noformējumā</b><span>Ar jūsu krāsām un tekstu, sagatavota drukai tipogrāfijā.</span></li>
+      </ul>
+      <div class="mail">
+        <a class="btn" href="mailto:ngoloveckis@gmail.com?subject=M%C4%81rti%C5%86ielas%20pirts%20Google%20ieraksts">Rakstīt Nikitam</a>
+        <span>ngoloveckis@gmail.com</span>
+      </div>
+      <p class="fine" style="margin-top:22px">Ja nav aktuāli, nekas nav jādara. Ierakstu Google kartēs salīdzināju ar malkaspirts.lv, zl.lv un OpenStreetMap. Ja kopš pārbaudes kaut kas jau ir izlabots, to varat izlaist.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><b>Šī lapa ir neatkarīgs Nikitas priekšlikums.</b> Tā nav Mārtiņielas pirts oficiālā lapa un nav saistīta ar Google.</p>
+    <p>E-pasts: <a href="mailto:ngoloveckis@gmail.com">ngoloveckis@gmail.com</a></p>
+    <p>Fotogrāfijas: Mārtiņielas pirts, no Google kartēm. Adreses dati: © OpenStreetMap dalībnieki.</p>
+  </div>
+</footer>
+
+<div class="sheet" aria-hidden="true"></div>
+
+<script>
+(function(){
+  /* language layer: Latvian only for now; a second language is one more data-lang span and one more entry here */
+  var LANGS=['lv'], lang='lv', q=null;
+  try{q=new URLSearchParams(location.search).get('lang')}catch(e){}
+  if(LANGS.indexOf(q)>-1){lang=q}
+  else{try{var s=localStorage.getItem('martinielas-lang');if(LANGS.indexOf(s)>-1)lang=s}catch(e){}}
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-lang]').forEach(function(el){el.hidden=el.getAttribute('data-lang')!==lang});
+  try{localStorage.setItem('martinielas-lang',lang)}catch(e){}
+
+  /* copy the address that goes into Google's field */
+  document.querySelectorAll('[data-copy]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.getAttribute('data-copy'), old=b.textContent;
+      function done(){b.textContent='Nokopēts';setTimeout(function(){b.textContent=old},1600)}
+      function plain(){
+        var ta=document.createElement('textarea');ta.value=t;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.opacity='0';
+        document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){}document.body.removeChild(ta);
+      }
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,plain)}else{plain()}
+    });
+  });
+
+  /* print one A4 sheet with four A6 cards */
+  var sheet=document.querySelector('.sheet'), card=document.querySelector('.card'), pb=document.querySelector('[data-print]');
+  if(sheet&&card&&pb){
+    for(var i=0;i<4;i++){sheet.appendChild(card.cloneNode(true))}
+    pb.addEventListener('click',function(){
+      var st=document.createElement('style');st.textContent='@page{size:A4 portrait;margin:0}';document.head.appendChild(st);
+      document.documentElement.classList.add('print-cards');
+      function off(){document.documentElement.classList.remove('print-cards');if(st.parentNode){st.parentNode.removeChild(st)}window.removeEventListener('afterprint',off)}
+      window.addEventListener('afterprint',off);
+      window.print();
+    });
+  }
+})();
+</script>
+</body>
+</html>
